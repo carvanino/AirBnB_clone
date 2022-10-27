@@ -31,7 +31,7 @@ class FileStorage:
         fs_dict = FileStorage.__objects
         obj_dict = dict()
         for obj in fs_dict.keys():
-            obj_dict[obj] = fs_dict[obj].dict()
+            obj_dict[obj] = fs_dict[obj].to_dict()
         with open(FileStorage.__file_path, "w") as f:
             json.dump(obj_dict, f)
 
